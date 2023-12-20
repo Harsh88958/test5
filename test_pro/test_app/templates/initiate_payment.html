@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PhonePe Payment</title>
+</head>
+<body>
+    <h1>PhonePe Payment Integration</h1>
+    <p>Initiate Payment:</p>
+    <form method="post" action="{% url 'process_payment' %}">
+        {% csrf_token %}
+        <!-- Add hidden fields for merchant_id, order_id, amount, and other necessary data -->
+        <input type="hidden" name="merchant_id" value="{{ merchant_id }}">
+        <input type="hidden" name="order_id" value="{{ order_id }}">
+        <input type="hidden" name="amount" value="{{ amount }}">
+        <!-- Add more fields as needed -->
+
+        <button type="submit">Pay with PhonePe</button>
+    </form>
+</body>
+</html>

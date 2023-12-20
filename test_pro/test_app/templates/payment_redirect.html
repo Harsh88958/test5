@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting to PhonePe Payment Gateway...</title>
+</head>
+<body>
+    <h1>Redirecting to PhonePe Payment Gateway...</h1>
+    <p>Please wait while we redirect you to complete the payment...</p>
+
+    <!-- Use JavaScript to automatically redirect to the PhonePe payment gateway URL -->
+    <script type="text/javascript">
+        // Access the payment URL passed from the view
+        const paymentUrl = "{{ payment_url }}";
+
+        // Redirect the user to the PhonePe payment gateway URL
+        window.location.href = paymentUrl;
+    </script>
+</body>
+</html>
